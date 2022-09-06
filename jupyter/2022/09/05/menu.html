@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -182,6 +182,7 @@ window.onload = wrap_img;
 
     <span class="n">Scanner</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
 
+    <span class="c1">// gcd</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
@@ -189,20 +190,68 @@ window.onload = wrap_img;
             <span class="k">return</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">);</span>
     <span class="p">}</span>
 
+    <span class="c1">// lcm</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">lcm</span><span class="p">(</span><span class="kt">int</span> <span class="n">n1</span><span class="p">,</span><span class="kt">int</span> <span class="n">n2</span><span class="p">)</span> <span class="p">{</span>
         
         <span class="k">return</span> <span class="n">n1</span><span class="o">*</span><span class="n">n2</span><span class="o">/</span><span class="p">(</span><span class="n">gcd</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span><span class="n">n2</span><span class="p">));</span>
     <span class="p">}</span>
 
+    <span class="c1">//fibonacci</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
     <span class="p">{</span>
-        <span class="c1">// Base Case</span>
+        
         <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
   
-        <span class="c1">// Recursive call</span>
+        
         <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
             <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">//mean</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">meancalc</span> <span class="p">(</span><span class="kt">double</span><span class="o">[]</span> <span class="n">nums</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">double</span> <span class="n">sum</span><span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">nums</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">sum</span> <span class="o">+=</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="kt">double</span> <span class="n">average</span> <span class="o">=</span> <span class="n">sum</span><span class="o">/</span><span class="n">nums</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">average</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">//mode</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">modecalc</span><span class="p">(</span><span class="kt">double</span><span class="o">[]</span> <span class="n">numsMode</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">double</span> <span class="n">maxValue</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">maxCount</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">numsMode</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">numsMode</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">numsMode</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">numsMode</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">==</span> <span class="n">numsMode</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">)</span>
+                    <span class="o">++</span><span class="n">count</span><span class="p">;</span>
+                 <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">count</span> <span class="o">&gt;</span> <span class="n">maxCount</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">maxCount</span> <span class="o">=</span> <span class="n">count</span><span class="p">;</span>
+                <span class="n">maxValue</span> <span class="o">=</span> <span class="n">numsMode</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+             <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">maxValue</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">//standard deviation</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">sdcalc</span> <span class="p">(</span><span class="kt">double</span><span class="o">[]</span> <span class="n">numsSD</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">numsSD</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">sum</span> <span class="o">+=</span> <span class="n">numsSD</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="kt">double</span> <span class="n">average</span> <span class="o">=</span> <span class="n">sum</span><span class="o">/</span><span class="n">numsSD</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">sdsum</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">standev</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span><span class="n">numsSD</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">sdsum</span> <span class="o">+=</span> <span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">numsSD</span><span class="o">[</span><span class="n">j</span><span class="o">]-</span><span class="n">average</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+            <span class="n">standev</span> <span class="o">=</span> <span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="n">sdsum</span><span class="o">/</span><span class="n">numsSD</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">standev</span><span class="p">;</span>
     <span class="p">}</span>
 
     <span class="c1">// Print the menu options to Terminal</span>
@@ -214,6 +263,9 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1 - GCD&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2 - LCM&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;3 - Fibonacci&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;4 - Mean&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;5 - Mode&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;6 - Standard Deviation&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;0 - Quit&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;-------------------------\n&quot;</span><span class="p">);</span>
     <span class="p">}</span>
@@ -227,6 +279,7 @@ window.onload = wrap_img;
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Goodbye, World!&quot;</span><span class="p">);</span>
                 <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
                 <span class="k">break</span><span class="p">;</span>
+                
             <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter the two numbers: &quot;</span><span class="p">);</span>
                 <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
@@ -234,6 +287,7 @@ window.onload = wrap_img;
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The two numbers are: &quot;</span> <span class="o">+</span> <span class="n">a</span> <span class="o">+</span> <span class="s">&quot; and &quot;</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The GCD of the two numbers is: &quot;</span> <span class="o">+</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">));</span>
                 <span class="k">break</span><span class="p">;</span>
+
             <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter the two numbers: &quot;</span><span class="p">);</span>
                 <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
@@ -241,6 +295,7 @@ window.onload = wrap_img;
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The two numbers are: &quot;</span> <span class="o">+</span> <span class="n">n1</span> <span class="o">+</span> <span class="s">&quot; and &quot;</span> <span class="o">+</span> <span class="n">n2</span><span class="p">);</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;The LCM of the two numbers is: &quot;</span> <span class="o">+</span> <span class="n">lcm</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">));</span>
                 <span class="k">break</span><span class="p">;</span>
+
             <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter a number: &quot;</span><span class="p">);</span>
                 <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
@@ -249,7 +304,64 @@ window.onload = wrap_img;
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
                 <span class="p">};</span>
                 <span class="k">break</span><span class="p">;</span>
-                    
+
+            <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
+                <span class="n">String</span> <span class="n">userInputStr</span><span class="p">;</span>
+                <span class="kt">double</span> <span class="n">meanNumber</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">numofNum</span><span class="p">;</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;how many values would you like to average?&quot;</span><span class="p">);</span>
+                <span class="n">userInputStr</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+                <span class="n">numofNum</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">userInputStr</span><span class="p">);</span>
+                <span class="kt">double</span><span class="o">[]</span> <span class="n">nums</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">double</span> <span class="o">[</span><span class="n">numofNum</span><span class="o">]</span><span class="p">;</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">numofNum</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;\nenter value:&quot;</span> <span class="p">);</span>
+                    <span class="n">userInputStr</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+                    <span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">userInputStr</span><span class="p">);</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">nums</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+                        <span class="p">}</span>
+                <span class="n">meanNumber</span> <span class="o">=</span> <span class="n">meancalc</span><span class="p">(</span><span class="n">nums</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;\nthe mean is: &quot;</span> <span class="o">+</span> <span class="n">meanNumber</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+
+            <span class="k">case</span> <span class="mi">5</span><span class="p">:</span>
+                <span class="n">String</span> <span class="n">userInputStrMode</span><span class="p">;</span>
+                <span class="kt">double</span> <span class="n">mode</span><span class="p">,</span> <span class="n">maxValue</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">numofNumMode</span><span class="p">;</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;how many values would you like to find the mode of?&quot;</span><span class="p">);</span>
+                <span class="n">userInputStrMode</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+                <span class="n">numofNumMode</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">userInputStrMode</span><span class="p">);</span>
+                <span class="kt">double</span><span class="o">[]</span> <span class="n">numsMode</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">double</span> <span class="o">[</span><span class="n">numofNumMode</span><span class="o">]</span><span class="p">;</span> <span class="c1">//creates array with doubles, numofNum number of values in the array</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">numofNumMode</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;\nenter value: &quot;</span><span class="p">);</span>
+                    <span class="n">userInputStrMode</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+                    <span class="n">numsMode</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">userInputStrMode</span><span class="p">);</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">numsMode</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="n">mode</span> <span class="o">=</span> <span class="n">modecalc</span><span class="p">(</span><span class="n">numsMode</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;\nthe mode is &quot;</span> <span class="o">+</span><span class="n">mode</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+
+            <span class="k">case</span> <span class="mi">6</span><span class="p">:</span>   
+                <span class="n">String</span> <span class="n">userInputStrSD</span><span class="p">;</span>
+                <span class="kt">double</span> <span class="n">sdNumber</span><span class="p">;</span>
+                <span class="kt">int</span> <span class="n">numofNumSD</span><span class="p">;</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;how many values would you like to find the standard deviation of?&quot;</span><span class="p">);</span>
+                <span class="n">userInputStrSD</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+                <span class="n">numofNumSD</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">userInputStrSD</span><span class="p">);</span>
+                <span class="kt">double</span><span class="o">[]</span> <span class="n">numsSD</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">double</span> <span class="o">[</span><span class="n">numofNumSD</span><span class="o">]</span><span class="p">;</span> <span class="c1">//creates array with doubles, nomofNum number of values in the array</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">numofNumSD</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;\nenter value: &quot;</span><span class="p">);</span>
+                    <span class="n">userInputStrSD</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+                    <span class="n">numsSD</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">userInputStrSD</span><span class="p">);</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">numsSD</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="n">sdNumber</span> <span class="o">=</span> <span class="n">sdcalc</span><span class="p">(</span><span class="n">numsSD</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;\nthe standard deviation is &quot;</span> <span class="o">+</span><span class="n">sdNumber</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span> 
+            
+            
             <span class="k">default</span><span class="p">:</span>
                 <span class="c1">//Prints error message from console</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Unexpected choice, try again.&quot;</span><span class="p">);</span>
@@ -286,92 +398,17 @@ Choose from these choices
 1 - GCD
 2 - LCM
 3 - Fibonacci
+4 - Mean
+5 - Mode
+6 - Standard Deviation
 0 - Quit
 -------------------------
 
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1: Enter the two numbers: 
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The two numbers are: 4 and 5
-The GCD of the two numbers is: 1
-
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2: Enter the two numbers: 
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The two numbers are: 6 and 10
-The LCM of the two numbers is: 30
-
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>3: Enter a number: 
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>The number is: 7
-0 1 1 2 3 5 8 
+6: how many values would you like to find the standard deviation of?
+enter value: 4.0
+enter value: 3.0
+the standard deviation is 0.5
+0: Goodbye, World!
 </pre>
 </div>
 </div>
