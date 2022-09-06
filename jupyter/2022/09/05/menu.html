@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      10 min read
     
 </span></p>
 
@@ -182,11 +182,17 @@ window.onload = wrap_img;
 
     <span class="n">Scanner</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
     <span class="n">Scanner</span> <span class="n">inputStream</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+    <span class="n">Scanner</span> <span class="n">scan</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
     <span class="n">String</span> <span class="n">userInputStr</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">numofNum</span><span class="p">,</span> <span class="n">userNum</span><span class="p">,</span> <span class="n">fact</span><span class="p">,</span> <span class="n">tempType</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">numofNum</span><span class="p">,</span> <span class="n">userNum</span><span class="p">,</span> <span class="n">fact</span><span class="p">,</span> <span class="n">tempType</span><span class="p">,</span> <span class="n">number</span><span class="p">;</span>
     <span class="kt">double</span> <span class="n">mode</span><span class="p">,</span> <span class="n">maxValue</span><span class="p">,</span> <span class="n">meanNumber</span><span class="p">,</span> <span class="n">sdNumber</span><span class="p">,</span> <span class="n">celcius</span><span class="p">,</span> <span class="n">farenheit</span><span class="p">,</span> <span class="n">kelvin</span><span class="p">,</span> <span class="n">medianNum</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">dec_num</span><span class="p">,</span> <span class="n">quot</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">choice</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">bin_num</span><span class="o">[]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">100</span><span class="o">]</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">rowF</span><span class="p">,</span> <span class="n">rowS</span><span class="p">,</span> <span class="n">colF</span><span class="p">,</span> <span class="n">colS</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">first</span><span class="o">[][]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">][</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">second</span><span class="o">[][]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">][</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">product</span><span class="o">[][]</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">][</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+    <span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
     <span class="kt">char</span> <span class="n">endReply</span><span class="p">;</span> 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">REPORT</span> <span class="o">=</span> <span class="s">&quot;\nFactorial of &quot;</span><span class="p">;</span> 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">FCONVERT</span> <span class="o">=</span> <span class="s">&quot;\nConverted to Farenheit: &quot;</span><span class="p">;</span>
@@ -307,6 +313,8 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;9 - Temperature Converter&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;10 - Median&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;11 - Number Sort&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;12 - Factors&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;13 - Matrices&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;0 - Quit&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;-------------------------\n&quot;</span><span class="p">);</span>
     <span class="p">}</span>
@@ -507,6 +515,64 @@ window.onload = wrap_img;
                 <span class="p">}</span>
                 <span class="k">break</span><span class="p">;</span>
 
+            <span class="k">case</span> <span class="mi">12</span><span class="p">:</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Input a Whole Number : &quot;</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span><span class="p">);</span>
+                <span class="n">number</span> <span class="o">=</span> <span class="n">scan</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Your factors are: &quot;</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span><span class="p">);</span>
+    
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">number</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span> <span class="p">)</span> <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">number</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span><span class="p">);</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                    <span class="k">break</span><span class="p">;</span>
+
+            <span class="k">case</span> <span class="mi">13</span><span class="p">:</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter Rows and Cols of First Matrix&quot;</span><span class="p">);</span>
+                <span class="n">rowF</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+                <span class="n">colF</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+     
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter Elements of First Matrix&quot;</span><span class="p">);</span>
+     
+                <span class="c1">// Input first matrix from user</span>
+                <span class="k">for</span> <span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">rowF</span><span class="p">;</span> <span class="n">a</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">colF</span><span class="p">;</span> <span class="n">b</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="n">first</span><span class="o">[</span><span class="n">a</span><span class="o">][</span><span class="n">b</span><span class="o">]</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter Rows and Cols of Second Matrix&quot;</span><span class="p">);</span>
+                <span class="n">rowS</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+                <span class="n">colS</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+ 
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter Elements of Second Matrix&quot;</span><span class="p">);</span>
+ 
+                <span class="c1">// Input second matrix from user</span>
+                <span class="k">for</span> <span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">rowS</span><span class="p">;</span> <span class="n">a</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">colS</span><span class="p">;</span> <span class="n">b</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="n">second</span><span class="o">[</span><span class="n">a</span><span class="o">][</span><span class="n">b</span><span class="o">]</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="c1">// Multiplying two matrices</span>
+                <span class="k">for</span> <span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">rowF</span><span class="p">;</span> <span class="n">a</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">colF</span><span class="p">;</span> <span class="n">b</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="k">for</span> <span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">colS</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                            <span class="n">product</span><span class="o">[</span><span class="n">a</span><span class="o">][</span><span class="n">b</span><span class="o">]</span> <span class="o">+=</span> <span class="n">first</span><span class="o">[</span><span class="n">a</span><span class="o">][</span><span class="n">k</span><span class="o">]</span> <span class="o">*</span> <span class="n">second</span><span class="o">[</span><span class="n">k</span><span class="o">][</span><span class="n">b</span><span class="o">]</span><span class="p">;</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+ 
+                <span class="c1">// Printing Product Matrix</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Product Matrix&quot;</span><span class="p">);</span>
+                <span class="k">for</span> <span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">rowF</span><span class="p">;</span> <span class="n">a</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="n">colS</span><span class="p">;</span> <span class="n">b</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">product</span><span class="o">[</span><span class="n">a</span><span class="o">][</span><span class="n">b</span><span class="o">]</span> <span class="o">+</span> <span class="s">&quot; &quot;</span><span class="p">);</span>
+                    <span class="p">}</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="k">break</span><span class="p">;</span>
+     
+
 <span class="nl">            default:</span>
                 <span class="c1">//Prints error message from console</span>
                 <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Unexpected choice, try again.&quot;</span><span class="p">);</span>
@@ -551,6 +617,8 @@ Choose from these choices
 9 - Temperature Converter
 10 - Median
 11 - Number Sort
+12 - Factors
+13 - Matrices
 0 - Quit
 -------------------------
 
@@ -565,28 +633,35 @@ The LCM of the two numbers is: 30
 3: Enter a number: 
 The number is: 5
 0 1 1 2 3 
+4: Input a Decimal Number : 
+Number is: 12
+Binary number is: 1100
+
 5: 
 Input an integer: java.lang.NumberFormatException: For input string: &#34;&#34;: Not a number, try again.
 5: 
 Input an integer: 
 Factorial of 7 is 5040
 6: how many values would you like to find the standard deviation of?
-enter value:1.4
-enter value:5.6
-enter value:0.74
-enter value:9.0
-enter value:4.5
-the standard deviation is 2.996333759780442
+enter value:12.0
+enter value:13.0
+enter value:14.0
+enter value:15.0
+enter value:16.0
+the standard deviation is 1.4142135623730951
 7: how many values would you like to average?
-enter value:1.5
 enter value:3.0
+enter value:4.0
 enter value:5.0
-the mean is 3.1666666666666665
+the mean is 4.0
 8: how many values would you like to find the mode of?
 enter value: 2.0
 enter value: 2.0
 enter value: 3.0
 the mode is 2.0
+3: Enter a number: 
+The number is: 2
+0 1 
 9: This program converts degress in Celcius to Farenheit or Kelvin 
 
 Temperature in Celcius: 35.0
@@ -594,20 +669,31 @@ Convert to (1)Farenheit or (2)Kelvin: 1
 Converted to Farenheit: 95.0
 10: how many values would you like to input?
 enter value: 1.0
-enter value: 3.0
 enter value: 2.0
+enter value: 3.0
 enter value: 4.0
 enter value: 5.0
 Median: 3.0
 
 11: how many values would you like to input?
-enter value: 1.0
-enter value: 3.0
 enter value: 2.0
-enter value: 4.0
 
 Sorted Numbers: 
-1.0, 2.0, 3.0, 4.0, 
+2.0, 
+12: Input a Whole Number : 
+Your factors are: 
+1 
+2 
+17 
+34 
+
+13: Enter Rows and Cols of First Matrix
+Enter Elements of First Matrix
+Enter Rows and Cols of Second Matrix
+Enter Elements of Second Matrix
+Product Matrix
+8 10 
+
 0: Goodbye, World!
 </pre>
 </div>
