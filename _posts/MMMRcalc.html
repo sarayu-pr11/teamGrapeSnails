@@ -1,0 +1,84 @@
+---
+layout: default
+permalink: /MMMRcalc/
+title: Calculator
+search_exclude: false
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Javascript Mean Median Mode Range Calculator</title>
+</head>
+
+<body>
+    <h1>Mean, Median, Mode, and Range Calculator</h1>
+    <p>Put a Space in Between Each Number.</p>
+    <br/>
+    <input id="numbers" placeholder="Data">
+    <button id="submit" onclick="calculate();">Submit Data</button>
+</body>
+</html>
+
+<script>
+    function calculate() 
+    {
+        //Creating Array
+        var string = document.getElementById("numbers").value;
+        var array = string.split(" ")
+        for(var x=0; x < array.length; x++) { array[x] = +array[x]; }
+    
+        //Order
+        var order = array.sort(function(a, b){return a-b});
+    
+        //Mean
+        var sum = 0;
+        for(var x=0; x < array.length; x++) { sum = sum + array[x]; }
+        console.log(sum);
+        var mean = sum / array.length;
+    
+        //Median
+        var median = 0;
+        if (array.length % 2 === 0) 
+        { //Even
+            median = (array[array.length / 2 - 1] + array[array.length / 2]) / 2;
+        } 
+        else 
+        { //Odd
+            median = array[(array.length - 1) / 2];
+        }
+    
+        //Mode
+        var mode = [];
+        for(x=0; x < array.length; x++) 
+        {
+            if(array[x] === array[x + 1]) 
+            {
+                mode.push(array[x]);
+            }
+        }
+    
+        //Range
+        var length = array.length;
+        var range = array[length - 1] - array[0];
+    
+        if (mode == "") 
+        {
+            mode = "None";
+        }
+    
+        alert("Order: " + order);
+        alert("Range: " + range);
+        alert("Median: " + median);
+        alert("Mean: " + mean);
+        alert("Mode: " + mode);
+        //console.log("Order: " + order);
+        //console.log("Range: " + range);
+        //console.log("Median: " + median);
+        //console.log("Mean: " + mean);
+        //console.log("Mode: " + mode);
+
+
+    }
+
+    document.getElementById("numbers").value = "";
+</script>
