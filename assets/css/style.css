@@ -425,41 +425,41 @@ pre code { font-size: 15px !important; }
 
 .youtube-iframe-wrapper iframe, .youtube-iframe-wrapper object, .youtube-iframe-wrapper embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-html, body, input, textarea, select, button { color: #B7B9F5 !important; background-color: #11001B !important; }
+html, body, input, textarea, select, button { color: #24729c !important; background-color: #C0D6DF !important; }
 
-a { color: #6E67CB !important; }
+a { color: #166088 !important; }
 
-a:hover { color: #B7B9F5 !important; }
+a:hover { color: #24729c !important; }
 
-.site-title, .site-title:visited, .site-nav, .page-link { color: #B7B9F5 !important; }
+.site-title, .site-title:visited, .site-nav, .page-link { color: #24729c !important; }
 
-.site-nav { background-color: #11001B; border-color: #281a3a; }
+.site-nav { background-color: #C0D6DF; border-color: #aac8d6; }
 
-* { scrollbar-color: #11001B #281a3a; }
+* { scrollbar-color: #C0D6DF #aac8d6; }
 
-pre, code { border-color: #281a3a; background-color: #190926; }
+pre, code { border-color: #aac8d6; background-color: #b8d1dc; }
 
-.page-description { color: #B7B9F5; }
+.page-description { color: #24729c; }
 
-.post-meta { color: #B7B9F5; }
+.post-meta { color: #24729c; }
 
-.post-content p, .post-content li { color: #B7B9F5; }
+.post-content p, .post-content li { color: #24729c; }
 
-.btn { background-color: #190926 !important; color: #B7B9F5 !important; border-color: #281a3a !important; }
+.btn { background-color: #b8d1dc !important; color: #24729c !important; border-color: #aac8d6 !important; }
 
-.btn:hover { background-color: #11001B !important; }
+.btn:hover { background-color: #C0D6DF !important; }
 
-table th { background-color: #190926; border-color: #281a3a; color: #B7B9F5; }
+table th { background-color: #b8d1dc; border-color: #aac8d6; color: #24729c; }
 
-table td { background-color: #11001B; border-color: #281a3a; color: #B7B9F5; }
+table td { background-color: #C0D6DF; border-color: #aac8d6; color: #24729c; }
 
-.flash { color: #11001B !important; filter: brightness(80%); }
+.flash { color: #C0D6DF !important; filter: brightness(80%); }
 
 canvas { filter: invert(100%); }
 
-.post-list > li > div { box-shadow: none !important; background-color: #190926; border: none !important; }
+.post-list > li > div { box-shadow: none !important; background-color: #b8d1dc; border: none !important; }
 
-li .post-meta-description { color: #B7B9F5 !important; }
+li .post-meta-description { color: #24729c !important; }
 
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
