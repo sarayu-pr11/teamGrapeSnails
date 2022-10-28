@@ -1,0 +1,40 @@
+---
+layout: default
+permalink: /randnum/
+title: Random
+search_exclude: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Random Number Generator</title>
+</head>
+
+<body>
+    <h1>Random Number Generator</h1>
+    <p>Enter Lower and Upper Bounds of your number.</p>
+    <br/>
+    <input id="lower" placeholder="Lower">
+    <input id="upper" placeholder="Upper">
+    <button id="submit" onclick="calculate();">Submit</button>
+
+    <p>Number: <span id="randnum"></span></p>
+</body>
+</html>
+
+<script>
+    function calculate() 
+    {
+
+        var upper = document.getElementById("upper").value;
+        var lower = document.getElementById("lower").value;
+
+        // Returns a random integer from 1 to 100:
+        //Math.floor(Math.random() * 100) + 1;
+        var number = Math.floor(Math.random() * upper) + lower;
+
+        document.getElementById('randnum').innerHTML = number;
+
+        
+    }
+</script>
