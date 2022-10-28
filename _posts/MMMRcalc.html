@@ -16,6 +16,14 @@ search_exclude: false
     <br/>
     <input id="numbers" placeholder="Data">
     <button id="submit" onclick="calculate();">Submit Data</button>
+
+    <h1>Ordered Numbers: <span id="order"></span></p>
+    <h1>Mean: <span id="mean"></span></p>
+    <h1>Median<span id="median"></span></p>
+    <h1>Mode<span id="mode"></span></p>
+    <h1>Range<span id="range"></span></p>
+
+
 </body>
 </html>
 
@@ -66,16 +74,17 @@ search_exclude: false
             mode = "None";
         }
     
-        alert("Order: " + order);
-        alert("Range: " + range);
-        alert("Median: " + median);
-        alert("Mean: " + mean);
-        alert("Mode: " + mode);
-        //console.log("Order: " + order);
-        //console.log("Range: " + range);
-        //console.log("Median: " + median);
-        //console.log("Mean: " + mean);
-        //console.log("Mode: " + mode);
+        //alert("Order: " + order);
+        //alert("Range: " + range);
+        //alert("Median: " + median);
+        //alert("Mean: " + mean);
+        //alert("Mode: " + mode);
+        
+        document.getElementById('order').innerHTML = order;
+        document.getElementById('range').innerHTML = range;
+        document.getElementById('median').innerHTML = median;
+        document.getElementById('mean').innerHTML = mean;
+        document.getElementById('mode').innerHTML = mode;
 
 
     }
