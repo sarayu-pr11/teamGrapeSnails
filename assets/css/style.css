@@ -425,6 +425,42 @@ pre code { font-size: 15px !important; }
 
 .youtube-iframe-wrapper iframe, .youtube-iframe-wrapper object, .youtube-iframe-wrapper embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
+html, body, input, textarea, select, button { color: #B7B9F5 !important; background-color: #11001B !important; }
+
+a { color: #6E67CB !important; }
+
+a:hover { color: #B7B9F5 !important; }
+
+.site-title, .site-title:visited, .site-nav, .page-link { color: #B7B9F5 !important; }
+
+.site-nav { background-color: #11001B; border-color: #281a3a; }
+
+* { scrollbar-color: #11001B #281a3a; }
+
+pre, code { border-color: #281a3a; background-color: #190926; }
+
+.page-description { color: #B7B9F5; }
+
+.post-meta { color: #B7B9F5; }
+
+.post-content p, .post-content li { color: #B7B9F5; }
+
+.btn { background-color: #190926 !important; color: #B7B9F5 !important; border-color: #281a3a !important; }
+
+.btn:hover { background-color: #11001B !important; }
+
+table th { background-color: #190926; border-color: #281a3a; color: #B7B9F5; }
+
+table td { background-color: #11001B; border-color: #281a3a; color: #B7B9F5; }
+
+.flash { color: #11001B !important; filter: brightness(80%); }
+
+canvas { filter: invert(100%); }
+
+.post-list > li > div { box-shadow: none !important; background-color: #190926; border: none !important; }
+
+li .post-meta-description { color: #B7B9F5 !important; }
+
 /*-----------------------------------*/
 /*----- ADD YOUR STYLES BELOW -------*/
 .language-python + .language-plaintext { border-left: 1px solid grey; margin-left: 1rem !important; }
