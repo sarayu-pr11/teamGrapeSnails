@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Jokes" />
 <meta property="og:description" content="Jokes" />
-<link rel="canonical" href="https://sarayu-pr11.github.io/teamGrapeSnails/2022/10/28/jokes.html" />
-<meta property="og:url" content="https://sarayu-pr11.github.io/teamGrapeSnails/2022/10/28/jokes.html" />
+<link rel="canonical" href="https://sarayu-pr11.github.io/teamGrapeSnails/2022/10/28/questions.html" />
+<meta property="og:url" content="https://sarayu-pr11.github.io/teamGrapeSnails/2022/10/28/questions.html" />
 <meta property="og:site_name" content="Fib’s Math" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-10-28T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Backend Jokes" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-28T00:00:00-05:00","datePublished":"2022-10-28T00:00:00-05:00","description":"Jokes","headline":"Backend Jokes","mainEntityOfPage":{"@type":"WebPage","@id":"https://sarayu-pr11.github.io/teamGrapeSnails/2022/10/28/jokes.html"},"url":"https://sarayu-pr11.github.io/teamGrapeSnails/2022/10/28/jokes.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-10-28T00:00:00-05:00","datePublished":"2022-10-28T00:00:00-05:00","description":"Jokes","headline":"Backend Jokes","mainEntityOfPage":{"@type":"WebPage","@id":"https://sarayu-pr11.github.io/teamGrapeSnails/2022/10/28/questions.html"},"url":"https://sarayu-pr11.github.io/teamGrapeSnails/2022/10/28/questions.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/teamGrapeSnails/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sarayu-pr11.github.io/teamGrapeSnails/feed.xml" title="Fib's Math" /><link rel="shortcut icon" type="image/x-icon" href="/teamGrapeSnails/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -75,8 +75,8 @@ window.onload = wrap_img;
   <thead>
   <tr>
     <th>Joke</th>
-    <th>HaHa</th>
-    <th>Boohoo</th>
+    <th>Like</th>
+    <th>Dislike</th>
   </tr>
   </thead>
   <tbody id="result">
@@ -91,15 +91,15 @@ window.onload = wrap_img;
   const resultContainer = document.getElementById("result");
 
   // keys for joke reactions
-  const HAHA = "haha";
-  const BOOHOO = "boohoo";
+  const Like = "like";
+  const Dislike = "dislike";
 
   // prepare fetch urls
-  // const url = "https://fibsmath.nighthawkcoders.tk/api/jokes//jokes";
-  const url = "https://fibsmath.nighthawkcoders.tk/api/jokes/";
+  // const url = "https://fibsmath.nighthawkcoders.tk/api/questions/";
+  const url = "https://fibsmath.nighthawkcoders.tk/api/questions/";
   const get_url = url +"/";
-  const like_url = url + "/like/";  // haha reaction
-  const jeer_url = url + "/jeer/";  // boohoo reaction
+  const like_url = url + "/like/";  
+  const jeer_url = url + "/dislike/";  
 
   // prepare fetch GET options
   const options = {
@@ -135,32 +135,30 @@ window.onload = wrap_img;
             const joke = document.createElement("td");
               joke.innerHTML = row.id + ". " + row.joke;  // add fetched data to innerHTML
 
-            // td for haha cell with onclick actions
-            const haha = document.createElement("td");
-              const haha_but = document.createElement('button');
-              haha_but.id = HAHA+row.id   // establishes a HAHA JS id for cell
-              haha_but.innerHTML = row.haha;  // add fetched "haha count" to innerHTML
-              haha_but.onclick = function () {
+            const like = document.createElement("td");
+              const like_but = document.createElement('button');
+              like_but.id = Like+row.id   
+              like_but.innerHTML = row.like;  
+              like_but.onclick = function () {
                 // onclick function call with "like parameters"
-                reaction(HAHA, like_url+row.id, haha_but.id);  
+                reaction(Like, like_url+row.id, like_but.id);  
               };
-              haha.appendChild(haha_but);  // add "haha button" to haha cell
+              like.appendChild(like_but);  
 
-            // td for boohoo cell with onclick actions
-            const boohoo = document.createElement("td");
-              const boohoo_but = document.createElement('button');
-              boohoo_but.id = BOOHOO+row.id  // establishes a BOOHOO JS id for cell
-              boohoo_but.innerHTML = row.boohoo;  // add fetched "boohoo count" to innerHTML
-              boohoo_but.onclick = function () {
+            const dislike = document.createElement("td");
+              const dislike_but = document.createElement('button');
+              dislike_but.id = Dislike+row.id  
+              dislike_but.innerHTML = row.dislike; 
+              dislike_but.onclick = function () {
                 // onclick function call with "jeer parameters"
-                reaction(BOOHOO, jeer_url+row.id, boohoo_but.id);  
+                reaction(Dislike, jeer_url+row.id, dislike_but.id);  
               };
-              boohoo.appendChild(boohoo_but);  // add "boohoo button" to boohoo cell
+              dislike.appendChild(dislike);  
              
             // this builds ALL td's (cells) into tr (row) element
             tr.appendChild(joke);
-            tr.appendChild(haha);
-            tr.appendChild(boohoo);
+            tr.appendChild(like);
+            tr.appendChild(dislike);
 
             // this adds all the tr (row) work above to the HTML "result" container
             resultContainer.appendChild(tr);
@@ -188,10 +186,10 @@ window.onload = wrap_img;
       response.json().then(data => {
           console.log(data);
           // Likes or Jeers updated/incremented
-          if (type === HAHA) // like data element
-            document.getElementById(elemID).innerHTML = data.haha;  // fetched haha data assigned to haha Document Object Model (DOM)
-          else if (type === BOOHOO) // jeer data element
-            document.getElementById(elemID).innerHTML = data.boohoo;  // fetched boohoo data assigned to boohoo Document Object Model (DOM)
+          if (type === Like) // like data element
+            document.getElementById(elemID).innerHTML = data.like;  
+          else if (type === Dislike) // jeer data element
+            document.getElementById(elemID).innerHTML = data.dislike;  
           else
             error("unknown type: " + type);  // should never occur
       })
