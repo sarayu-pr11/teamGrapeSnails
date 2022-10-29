@@ -29,7 +29,7 @@ tags: [jupyter]
 
   // prepare fetch urls
   // const url = "https://fibsmath.nighthawkcoders.tk/api/questions/";
-  const url = "https://fibsmath.nighthawkcoders.tk/api/questions/";
+  const url = "https://fibsmath.nighthawkcoders.tk/api/questions";
   const get_url = url +"/";
   const like_url = url + "/like/";  
   const jeer_url = url + "/dislike/";  
