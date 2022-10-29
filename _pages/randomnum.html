@@ -36,14 +36,15 @@ search_exclude: true
 
         var upper = document.getElementById("upper").value;
         var lower = document.getElementById("lower").value;
+        var difference = parseFloat(upper) - parseFloat(lower);
 
         // Returns a random integer from 1 to 100:
         //Math.floor(Math.random() * 100) + 1;
         var num1 = Math.random();
-        var num2 = num1 * upper;
+        var num2 = num1 * difference;
         var num3 = parseFloat(num2) + parseFloat(lower);
         var num4 = Math.floor(num3);
-        var number = Math.floor((Math.random() * upper) + parseFloat(lower));
+        var number = Math.floor((Math.random() * difference) + parseFloat(lower));
 
         document.getElementById('randnum').innerHTML = number;
 
