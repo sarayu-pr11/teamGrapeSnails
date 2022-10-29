@@ -41,9 +41,9 @@ search_exclude: true
         //Math.floor(Math.random() * 100) + 1;
         var num1 = Math.random();
         var num2 = num1 * upper;
-        var num3 = num2 + lower;
+        var num3 = parseFloat(num2) + parseFloat(lower);
         var num4 = Math.floor(num3);
-        var number = Math.floor((Math.random() * upper) + lower);
+        var number = Math.floor((Math.random() * upper) + parseFloat(lower));
 
         document.getElementById('randnum').innerHTML = number;
 
