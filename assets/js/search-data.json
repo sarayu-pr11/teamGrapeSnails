@@ -77,9 +77,6 @@
   
 
   
-  
-
-  
 
   
   
@@ -90,13 +87,18 @@
   
 
   
+
+  
+  
+
+  
   
 
   
   
 
   
-      ,"page12": {
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://sarayu-pr11.github.io/teamGrapeSnails/robots.txt",
