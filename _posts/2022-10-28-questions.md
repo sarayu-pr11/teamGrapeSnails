@@ -1,14 +1,14 @@
 ---
-title: Backend Jokes
+title: Response Bias Project
 layout: default
-description: Jokes
+description: questions
 tags: [jupyter]
 ---
 <!-- HTML table fragment for page -->
 <table>
   <thead>
   <tr>
-    <th>Joke</th>
+    <th>Questions</th>
     <th>Like</th>
     <th>Dislike</th>
   </tr>
@@ -24,7 +24,6 @@ tags: [jupyter]
   // prepare HTML defined "result" container for new output
   const resultContainer = document.getElementById("result");
 
-  // keys for joke reactions
   const Like = "like";
   const Dislike = "dislike";
 
@@ -65,9 +64,8 @@ tags: [jupyter]
             // make "tr element" for each "row of data"
             const tr = document.createElement("tr");
             
-            // td for joke cell
-            const joke = document.createElement("td");
-              joke.innerHTML = row.id + ". " + row.joke;  // add fetched data to innerHTML
+            const question = document.createElement("td");
+              question.innerHTML = row.id + ". " + row.question;  // add fetched data to innerHTML
 
             const like = document.createElement("td");
               const like_but = document.createElement('button');
@@ -90,7 +88,7 @@ tags: [jupyter]
               dislike.appendChild(dislike);  
              
             // this builds ALL td's (cells) into tr (row) element
-            tr.appendChild(joke);
+            tr.appendChild(question);
             tr.appendChild(like);
             tr.appendChild(dislike);
 
