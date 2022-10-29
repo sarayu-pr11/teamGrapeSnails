@@ -84,6 +84,9 @@ window.onload = wrap_img;
     <button id="submit" onclick="calculate();">Submit</button>
 
     <p>Number: <span id="randnum"></span></p>
+
+    <p>lower: <span id="low"></span></p>
+    <p>upper: <span id="up"></span></p>
 </body>
 </html>
 
@@ -99,6 +102,9 @@ window.onload = wrap_img;
         var number = Math.floor(Math.random() * upper) + lower;
 
         document.getElementById('randnum').innerHTML = number;
+
+        document.getElementById('low').innerHTML = lower;
+        document.getElementById('up').innerHTML = upper;
 
         
     }
