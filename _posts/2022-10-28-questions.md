@@ -85,7 +85,7 @@ tags: [jupyter]
                 // onclick function call with "jeer parameters"
                 reaction(Dislike, jeer_url+row.id, dislike_but.id);  
               };
-              dislike.appendChild(dislike);  
+              dislike.appendChild(dislike_but);  
              
             // this builds ALL td's (cells) into tr (row) element
             tr.appendChild(question);
