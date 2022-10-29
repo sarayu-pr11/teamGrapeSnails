@@ -85,13 +85,6 @@ window.onload = wrap_img;
 
     <p>Number: <span id="randnum"></span></p>
 
-    <p>lower: <span id="low"></span></p>
-    <p>upper: <span id="up"></span></p>
-
-    <p>num1: <span id="num1"></span></p>
-    <p>num2: <span id="num2"></span></p>
-    <p>num3: <span id="num3"></span></p>
-    <p>num4: <span id="num4"></span></p>
 </body>
 </html>
 
@@ -105,21 +98,10 @@ window.onload = wrap_img;
 
         // Returns a random integer from 1 to 100:
         //Math.floor(Math.random() * 100) + 1;
-        var num1 = Math.random();
-        var num2 = num1 * difference;
-        var num3 = parseFloat(num2) + parseFloat(lower);
-        var num4 = Math.floor(num3);
+       
         var number = Math.floor((Math.random() * difference) + parseFloat(lower));
 
         document.getElementById('randnum').innerHTML = number;
-
-        document.getElementById('low').innerHTML = lower;
-        document.getElementById('up').innerHTML = upper;
-
-        document.getElementById('num1').innerHTML = num1;
-        document.getElementById('num2').innerHTML = num2;
-        document.getElementById('num3').innerHTML = num3;
-        document.getElementById('num4').innerHTML = num4;
 
         
     }
