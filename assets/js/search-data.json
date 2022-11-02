@@ -60,9 +60,20 @@
 
   
   
+      ,"page0": {
+          "title": "2048",
+          "content": "&lt;!DOCTYPE html&gt; . 2048 . 2048 . . Score: 0 . .",
+          "url": "https://sarayu-pr11.github.io/teamGrapeSnails/2048/",
+          "relUrl": "/2048/",
+          "date": ""
+      }
+      
+  
 
   
-      ,"page1": {
+
+  
+      ,"page2": {
           "title": "Stats",
           "content": "&lt;!DOCTYPE html&gt; . Javascript Mean Median Mode Range Calculator . Mean, Median, Mode, and Range Calculator . Put a space in between each number. . Submit Data Ordered Numbers: . Mean: . Median: . Mode: . Range: . .",
           "url": "https://sarayu-pr11.github.io/teamGrapeSnails/MMMRcalc/",
@@ -75,7 +86,7 @@
   
 
   
-      ,"page3": {
+      ,"page4": {
           "title": "Desmos",
           "content": ". &lt;/th&gt; .",
           "url": "https://sarayu-pr11.github.io/teamGrapeSnails/desmos/",
@@ -111,7 +122,7 @@
   
 
   
-      ,"page14": {
+      ,"page15": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://sarayu-pr11.github.io/teamGrapeSnails/robots.txt",
