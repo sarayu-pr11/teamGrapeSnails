@@ -26,7 +26,7 @@ search_exclude: true
 <script>
     function calculate() 
     {
-
+        //upper and lower bound 
         var upper = document.getElementById("upper").value;
         var lower = document.getElementById("lower").value;
         var difference = parseFloat(upper) - parseFloat(lower);
@@ -34,6 +34,7 @@ search_exclude: true
         // Returns a random integer from 1 to 100:
         //Math.floor(Math.random() * 100) + 1;
        
+        //generates random number between bounds 
         var number = Math.floor((Math.random() * difference) + parseFloat(lower));
 
         document.getElementById('randnum').innerHTML = number;
