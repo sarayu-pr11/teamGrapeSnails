@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Unit3 Hw | Fib’s Math</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Unit3 Hw" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Homework: 2009 3B, 2017 1B, 2019 3B" />
+<meta property="og:description" content="Homework: 2009 3B, 2017 1B, 2019 3B" />
+<link rel="canonical" href="https://sarayu-pr11.github.io/teamGrapeSnails/2022/11/28/Unit3-HW.html" />
+<meta property="og:url" content="https://sarayu-pr11.github.io/teamGrapeSnails/2022/11/28/Unit3-HW.html" />
+<meta property="og:site_name" content="Fib’s Math" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-11-28T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Unit3 Hw" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-28T00:00:00-06:00","datePublished":"2022-11-28T00:00:00-06:00","description":"Homework: 2009 3B, 2017 1B, 2019 3B","headline":"Unit3 Hw","mainEntityOfPage":{"@type":"WebPage","@id":"https://sarayu-pr11.github.io/teamGrapeSnails/2022/11/28/Unit3-HW.html"},"url":"https://sarayu-pr11.github.io/teamGrapeSnails/2022/11/28/Unit3-HW.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/teamGrapeSnails/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sarayu-pr11.github.io/teamGrapeSnails/feed.xml" title="Fib's Math" /><link rel="shortcut icon" type="image/x-icon" href="/teamGrapeSnails/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/teamGrapeSnails/">Fib&#39;s Math</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/teamGrapeSnails/2048/">2048</a><a class="page-link" href="/teamGrapeSnails/MMMRcalc/">Stats</a><a class="page-link" href="/teamGrapeSnails/derivcalc/">Derivative</a><a class="page-link" href="/teamGrapeSnails/desmos/">Desmos</a><a class="page-link" href="/teamGrapeSnails/rbp/">RBP</a><a class="page-link" href="/teamGrapeSnails/randnum/">Random</a><a class="page-link" href="/teamGrapeSnails/scicalc/">Scientific</a><a class="page-link" href="/teamGrapeSnails/search/">Search</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Unit3 Hw</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-11-28T00:00:00-06:00" itemprop="datePublished">
+        Nov 28, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><strong>Homework: 2009 3B, 2017 1B, 2019 3B</strong></p>
+
+<p><strong>Grading Criteria</strong></p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>Completeness of FRQ - attempted</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Correctness of FRQ - showed output</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Organization - easy to follow</p>
+    </blockquote>
+  </li>
+</ul>
+
+<table>
+<thead>
+<tr class="header">
+<th><strong>Students 17/40</strong></th>
+<th><strong>Grade</strong></th>
+<th><strong>Complete</strong></th>
+<th><strong>Correct</strong></th>
+<th><strong>Organization</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://boply.github.io/fastpages/jupyter/week-8/2022/10/17/Presentation-HW.html"><span class="underline">Brayden C</span></a></td>
+<td><strong>0/1</strong></td>
+<td><p><strong>0</strong></p>
+<p>no attempt</p></td>
+<td><strong>0</strong></td>
+<td><p><strong>0</strong></p>
+<p>One single cluttered blog post with all homework pasted one after the other</p></td>
+</tr>
+<tr class="even">
+<td><a href="https://aaravarora01.github.io/AaravArora-APCSA-Fastpages/jupyter/2022/10/19/booleanfrqs.html"><span class="underline">Aarav A</span></a></td>
+<td><strong>0.9/1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="odd">
+<td><a href="https://aadyadaita.github.io/apcsa_indiv_repo_tri1/2022/10/22/Unit3.html"><span class="underline">Aadya</span></a></td>
+<td><strong>0.9/1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><a href="https://shreya-ahujaa.github.io/fastpages/fastpages/notes/booleans/if/2022/10/18/booleans-and-if-statments-notes.html"><span class="underline">Shreya</span></a></td>
+<td><strong>0.9/1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="odd">
+<td><a href="https://nathanmanangan.github.io/CSA-Fastpages/codecodecode/2022/10/23/boolean-and-if-statements-hw.html"><span class="underline">Nathan M</span></a></td>
+<td><strong>0.9/1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><a href="https://dontran15.github.io/CSAFastPages/college%20board/week%209/2022/10/23/boolean-and-if-statements-hw.html"><span class="underline">Don Tran</span></a></td>
+<td><strong>0.9/1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="odd">
+<td><a href="https://icygs.github.io/Krish-CSA/college%20board/2022/10/18/Unit-3-FRQs.html"><span class="underline">Krish Patil</span></a></td>
+<td><strong>0.9/1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><a href="https://nicholasramos5.github.io/VSCodings/college%20board/java/2022/10/18/Unit3-Boolean.html"><span class="underline">Nicholas Ramos</span></a></td>
+<td><strong>0.9/1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/Lychee80/Test/issues/8"><span class="underline">Serafina</span></a></td>
+<td><strong>0.9/1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><a href="https://utteranc.es/utterances.html?src=https%3A%2F%2Futteranc.es%2Fclient.js&amp;repo=nighthawkcoders%2FAPCSA&amp;issue-term=title&amp;label=blogpost-comment&amp;theme=github-light&amp;crossorigin=anonymous&amp;async=&amp;url=https%3A%2F%2Fnighthawkcoders.github.io%2FAPCSA%2F2022%2F10%2F17%2FAP-unit3.html&amp;origin=https%3A%2F%2Fnighthawkcoders.github.io&amp;pathname=APCSA%2F%2F2022%2F10%2F17%2FAP-unit3&amp;title=Unit+03+Tue+-+Boolean+Expressions+and+if+Statements+%7C+APCSA&amp;description=Student+Led+Instruction.&amp;og%3Atitle=Unit+03+Tue+-+Boolean+Expressions+and+if+Statements&amp;session=504e33d2c69f21e7445fb59a8l7yoCbwpPp63IX6cU%2FQseAehIE64i1zrqB7DI3r9%2FFtmhu4k%2FWAyjdLG77%2F4wHBIbAtJgvYOK9qcG943Qxc%2BemvtNd74DNxttVEdn1e2F3CIj7F10I%2BkKhfBkY%3D"><span class="underline">Saumya</span></a></td>
+<td><strong>0/1</strong></td>
+<td><p><strong>0</strong></p>
+<p>Not attempted or not linked</p></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr class="odd">
+<td><a href="https://utteranc.es/utterances.html?src=https%3A%2F%2Futteranc.es%2Fclient.js&amp;repo=nighthawkcoders%2FAPCSA&amp;issue-term=title&amp;label=blogpost-comment&amp;theme=github-light&amp;crossorigin=anonymous&amp;async=&amp;url=https%3A%2F%2Fnighthawkcoders.github.io%2FAPCSA%2F2022%2F10%2F17%2FAP-unit3.html&amp;origin=https%3A%2F%2Fnighthawkcoders.github.io&amp;pathname=APCSA%2F%2F2022%2F10%2F17%2FAP-unit3&amp;title=Unit+03+Tue+-+Boolean+Expressions+and+if+Statements+%7C+APCSA&amp;description=Student+Led+Instruction.&amp;og%3Atitle=Unit+03+Tue+-+Boolean+Expressions+and+if+Statements&amp;session=504e33d2c69f21e7445fb59a8l7yoCbwpPp63IX6cU%2FQseAehIE64i1zrqB7DI3r9%2FFtmhu4k%2FWAyjdLG77%2F4wHBIbAtJgvYOK9qcG943Qxc%2BemvtNd74DNxttVEdn1e2F3CIj7F10I%2BkKhfBkY%3D"><span class="underline">Prisha</span></a></td>
+<td><strong>0/1</strong></td>
+<td><p><strong>0</strong></p>
+<p>Not attempted or not linked</p></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+</tr>
+<tr class="even">
+<td><a href="https://xxaasxx.github.io/FASTPAGES2/2022/10/18/FRQweek2lesson.html"><span class="underline">Armaan</span></a></td>
+<td><strong>0.9/1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="odd">
+<td><a href="https://tianbinliu.github.io/Fastpage/jupyter/2022/08/22/Java-notebook.html#2019-FRQ1-HW"><span class="underline">Tianbin</span></a></td>
+<td><p><strong>1/1</strong></p>
+<p>Code is not the same as the CB answer key; divergent thinking!</p></td>
+<td><p><strong>1</strong></p>
+<p>Very nice</p></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><a href="https://evmyclipz.github.io/sample1_blog/jupyter/2022/10/24/Unit345.html"><span class="underline">Rohan M</span></a></td>
+<td><p><strong>1/1</strong></p>
+<p>Code is not the same as the CB answer key; divergent thinking!</p></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/Aryanboxout/Aryanfastpages/issues/9"><span class="underline">Aryan</span></a></td>
+<td><strong>0.9/1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="even">
+<td><a href="https://ninjabreadlord.github.io/chengfastpages/2022/11/08/lessonhacks.html"><span class="underline">Everitt</span></a></td>
+<td><strong>0.9/1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr class="odd">
+<td><a href="https://adi-k-coding.github.io/tri1CSA/classhmwrk/"><span class="underline">Adi</span></a></td>
+<td><strong>0.9/1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+<td><strong>1</strong></td>
+</tr>
+</tbody>
+</table>
+
+<p>*Students not listed did not submit working links to HW</p>
+
+  </div><a class="u-url" href="/teamGrapeSnails/2022/11/28/Unit3-HW.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/teamGrapeSnails/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/teamGrapeSnails/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/teamGrapeSnails/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
